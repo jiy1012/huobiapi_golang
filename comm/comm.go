@@ -3,7 +3,7 @@ package comm
 import (
 	"bytes"
 	"compress/gzip"
-	"fmt"
+	//"fmt"
 	"io/ioutil"
 	"encoding/json"
 )
@@ -14,7 +14,7 @@ func Gzip(data []byte)  {
 	defer w.Close()
 	w.Write(data)
 	w.Flush()
-	fmt.Println("gzip size:", len(b.Bytes()))
+	//fmt.Println("gzip size:", len(b.Bytes()))
 }
 
 func UnGzip(byte []byte) []byte {
@@ -22,7 +22,7 @@ func UnGzip(byte []byte) []byte {
 	r, _ := gzip.NewReader(b)
 	defer r.Close()
 	undatas, _ := ioutil.ReadAll(r)
-	fmt.Println("ungzip size:", len(undatas))
+	//fmt.Println("ungzip size:", len(undatas))
 	return undatas
 }
 

@@ -15,17 +15,19 @@ type DataStruct struct {
 	Vol    float32 `json:"vol"`
 }
 type ResStruct struct {
-	Status  string       `json:"status"`
-	Rep     string       `json:"rep"`
-	Subbed  string       `json:"subbed"`
-	Data    []DataStruct `json:"data"`
-	Tick    []DataStruct `json:"tick"`
-	ErrCode string       `json:"err-code"`
-	ErrMsg  string       `json:"err-msg"`
-	Ts      int64        `json:"ts"`
-	Ch      string       `json:"ch"`
+	Status   string       `json:"status"`
+	Rep      string       `json:"rep"`
+	Subbed   string       `json:"subbed"`
+	Unsubbed string       `json:"unsubbed"`
+	Data     []DataStruct `json:"data"`
+	Tick     DataStruct   `json:"tick"`
+	ErrCode  string       `json:"err-code"`
+	ErrMsg   string       `json:"err-msg"`
+	Ts       int64        `json:"ts"`
+	Ch       string       `json:"ch"`
 }
 type SubStruct struct {
-	Sub string `json:"sub"`
-	Id  string `json:"id"`
+	Sub   string `json:"sub"`
+	Id    string `json:"id"`
+	Unsub string `json:"unsub"`
 }
