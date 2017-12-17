@@ -57,6 +57,17 @@ func main()  {
 				json.Unmarshal(res,&resStruct)
 				//resStruct.Status
 				fmt.Println(resStruct)
+				var ddRobot comm.DDRobotStruct;
+				//append(ddRobot.At.Atmobiles, "18210048936")
+				ddRobot.Msgtype = "text"
+				if resStruct.Tick.Open < 280 {
+					ddRobot.Text.Content = "ltc已经小于280了"
+					comm.SendDDRobot(ddRobot)
+				}
+				if resStruct.Tick.Open > 320 {
+					ddRobot.Text.Content = "ltc已经大于320了"
+					comm.SendDDRobot(ddRobot)
+				}
 			}
 
 		}

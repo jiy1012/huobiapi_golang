@@ -1,1 +1,3 @@
 package conf
+
+const DDRobotWebHook = ""
