@@ -5,6 +5,8 @@
 放到GOPATH的src下的huobiapi。命令如下
 
     git clone git@github.com:jiy1012/huobiapi_golang.git huobiapi
+    cd huobiapi
+    sh build.sh
 
 # request方式
 go run request.go 
