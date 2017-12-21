@@ -60,14 +60,14 @@ func main()  {
 				var ddRobot comm.DDRobotStruct;
 				//append(ddRobot.At.Atmobiles, "18210048936")
 				ddRobot.Msgtype = "text"
-				if resStruct.Tick.Open < 280 {
-					ddRobot.Text.Content = "ltc已经小于280了"
+				if resStruct.Tick.Open < 290 {
+					ddRobot.Text.Content = "莱特币已经" + strconv.FormatFloat(resStruct.Tick.Open,'f',30,32)+"了！"
 					comm.SendDDRobot(ddRobot)
 				}
-				if resStruct.Tick.Open > 320 {
-					ddRobot.Text.Content = "ltc已经大于320了"
-					comm.SendDDRobot(ddRobot)
-				}
+				//if resStruct.Tick.Open > 320 {
+				//	ddRobot.Text.Content = "ltc已经大于320了"
+				//	comm.SendDDRobot(ddRobot)
+				//}
 			}
 
 		}
