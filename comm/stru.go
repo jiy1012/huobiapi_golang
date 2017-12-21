@@ -5,14 +5,14 @@ type ReqStruct struct {
 	Id  string `json:"id"`
 }
 type DataStruct struct {
-	Amonut float32 `json:"amonut"`
+	Amonut float64 `json:"amonut"`
 	Count  int64   `json:"count"`
 	Id     int64   `json:"id"`
-	Open   float32 `json:"open"`
-	Close  float32 `json:"close"`
-	Low    float32 `json:"low"`
-	High   float32 `json:"high"`
-	Vol    float32 `json:"vol"`
+	Open   float64 `json:"open"`
+	Close  float64 `json:"close"`
+	Low    float64 `json:"low"`
+	High   float64 `json:"high"`
+	Vol    float64 `json:"vol"`
 }
 type ResStruct struct {
 	Status   string       `json:"status"`
